@@ -6,7 +6,7 @@
       :url="cards[index].poster"
       :title="cards[index].title"
       :author="cards[index].author"
-      :years="cards[index].years"
+      :year="cards[index].year"
     />
   </section>
 </template>

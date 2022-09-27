@@ -5,7 +5,7 @@
     </div>
     <h2>{{ title }}</h2>
     <p>{{ author }}</p>
-    <p>{{ years }}</p>
+    <p>{{ year }}</p>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
     title: String,
     author: String,
     genre: String,
-    years: String,
+    year: String,
   },
 };
 </script>
