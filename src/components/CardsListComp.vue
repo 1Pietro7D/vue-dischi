@@ -30,7 +30,7 @@ export default {
 @import "@/assets/style/grid.scss";
 section {
   &.my-grid {
-    @include grid-col-5;
+    @include grid-col-1;
 
     @media screen and (min-width: 480px) {
       @include grid-col-2;
