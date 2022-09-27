@@ -44,7 +44,7 @@ export default {
       height: calc((100vw - 6rem) / 4 - 2rem);
     }
     @media screen and (min-width: 1200px) {
-      height: calc(1200px / 5 - 2rem);
+      height: calc((1200px - 4rem) / 5 - 2rem);
     }
     img {
       width: 100%;
