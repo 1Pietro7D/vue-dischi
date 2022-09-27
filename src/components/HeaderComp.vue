@@ -13,12 +13,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.logoContainer {
-  $size: 30px;
-  height: $size;
-  width: $size;
-  img {
-    width: 100%;
+@import "@/assets/style/variables.scss";
+header {
+  padding: 1.5rem;
+  background-color: $header_theme;
+  .logoContainer {
+    margin-left: 1rem;
+    $size: 75px;
+    height: $size;
+    width: $size;
+    img {
+      width: $size;
+      height: $size;
+      object-fit: scale-down;
+    }
   }
 }
 </style>
