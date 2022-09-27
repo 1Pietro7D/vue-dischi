@@ -17,4 +17,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "@/assets/style/variables.scss";
+main {
+  background-color: $main_theme;
+}
+</style>

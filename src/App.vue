@@ -45,6 +45,11 @@ export default {
 
 <style lang="scss">
 @import "@/assets/style/import.scss";
+.container-max {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
 </style>
 
 <!--
