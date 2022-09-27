@@ -1,0 +1,65 @@
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+
+.right {
+  right: 0;
+}
+.top {
+  top: 0;
+}
+.left {
+  left: 0;
+}
+.bottom {
+  bottom: 0;
+}
+
+@mixin relative-center {
+  $size: 50%;
+  position: relative;
+  top: $size;
+  left: $size;
+  transform: translate(-$size, -$size);
+}
+@mixin relativeY-center {
+  $size: 50%;
+  position: relative;
+  top: $size;
+  transform: translateY(-$size);
+}
+@mixin relativeX-center {
+  $size: 50%;
+  position: relative;
+  left: $size;
+  transform: translateX(-$size);
+}
+@mixin absolute-center {
+  /* always into relative container !! */
+  $size: 50%;
+  position: absolute;
+  top: $size;
+  left: $size;
+  transform: translate(-$size, -$size);
+}
+@mixin absoluteY-center {
+  /* always into relative container !! */
+  $size: 50%;
+  position: absolute;
+  top: $size;
+
+  transform: translateY(-$size);
+}
+@mixin absoluteX-center {
+  /* always into relative container !! */
+  $size: 50%;
+  position: absolute;
+  left: $size;
+  transform: translateX(-$size);
+}

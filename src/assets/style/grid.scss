@@ -1,0 +1,96 @@
+.d-grid {
+  display: grid;
+}
+@mixin grid-auto-col-1 {
+  display: grid;
+  grid-template-columns: auto;
+}
+@mixin grid-auto-col-2 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+@mixin grid-auto-col-3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+@mixin grid-auto-col-4 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+@mixin grid-auto-col-5 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+@mixin grid-auto-col-6 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+@mixin grid-auto-col-7 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+}
+@mixin grid-auto-col-8 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+@mixin grid-auto-col-9 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+}
+@mixin grid-auto-col-10 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+}
+@mixin grid-col-1 {
+  display: grid;
+  grid-template-columns: $one;
+}
+@mixin grid-col-2 {
+  display: grid;
+  grid-template-columns: $two $two;
+}
+@mixin grid-col-3 {
+  display: grid;
+  grid-template-columns: $three $three $three;
+}
+@mixin grid-col-4 {
+  display: grid;
+  grid-template-columns: $four $four $four $four;
+}
+@mixin grid-col-5 {
+  display: grid;
+  grid-template-columns: $five $five $five $five $five;
+}
+
+@mixin grid-col-6 {
+  display: grid;
+  grid-template-columns: $six $six $six $six $six $six;
+}
+@mixin grid-col-7 {
+  display: grid;
+  grid-template-columns: $seven $seven $seven $seven $seven $seven $seven;
+}
+@mixin grid-col-8 {
+  display: grid;
+  grid-template-columns: $eight $eight $eight $eight $eight $eight $eight $eight;
+}
+@mixin grid-col-9 {
+  display: grid;
+  grid-template-columns: $nine $nine $nine $nine $nine $nine $nine $nine $nine;
+}
+@mixin grid-col-10 {
+  display: grid;
+  grid-template-columns: $ten $ten $ten $ten $ten $ten $ten $ten $ten $ten;
+}
+
+$one: 100%;
+$two: 50%;
+$three: calc(100% / 3);
+$four: 25%;
+$five: 20%;
+$six: calc(100% / 6);
+$seven: calc(100% / 7);
+$eight: calc(100% / 8);
+$nine: calc(100% / 9);
+$ten: 10%;
