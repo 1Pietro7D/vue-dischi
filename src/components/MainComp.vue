@@ -1,12 +1,19 @@
 <template>
   <main>
-    <CharactersListComp />
+    <CardsListComp :cards="cardsList" />
   </main>
 </template>
 
 <script>
+import CardsListComp from "@/components/CardsListComp.vue";
 export default {
   name: "MainComp",
+  components: {
+    CardsListComp,
+  },
+  props: {
+    cardsList: Array,
+  },
 };
 </script>
 
