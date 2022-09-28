@@ -1,17 +1,19 @@
 <template>
-  <footer></footer>
+  <aside>
+    <nav></nav>
+  </aside>
 </template>
 
 <script>
 export default {
-  name: "FooterComp",
+  name: "AsideNavComp",
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/style/variables.scss";
-footer {
-  flex: 1;
-  background-color: $footer_theme;
+aside {
+  width: 300px;
+  background-color: $asideNav_theme;
 }
 </style>

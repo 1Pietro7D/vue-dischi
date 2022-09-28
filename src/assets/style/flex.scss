@@ -30,7 +30,7 @@
   flex-direction: row-reverse;
 }
 
-.column {
+.d-column {
   @include flex-col;
 }
 
@@ -162,13 +162,13 @@
 /** /align-self **/
 
 /** flex-shrink **/
-.shrink0 {
+.shrink-0 {
   flex-shrink: 0;
 }
-.shrink1 {
+.shrink-1 {
   flex-shrink: 1;
 }
-.shrink2 {
+.shrink-2 {
   flex-shrink: 2;
 }
 
@@ -176,10 +176,10 @@
 
 /** flex-grow **/
 
-.grow1 {
+.grow-1 {
   flex-grow: 1;
 }
-.grow2 {
+.grow-2 {
   flex-grow: 2;
 }
 
@@ -187,7 +187,7 @@
 
 /** flex-basis **/
 
-.base30 {
+.base-30 {
   flex-basis: 30%;
 }
 

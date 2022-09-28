@@ -21,5 +21,7 @@ export default {
 @import "@/assets/style/variables.scss";
 main {
   background-color: $main_theme;
+  height: 80vh;
+  overflow-y: scroll;
 }
 </style>
