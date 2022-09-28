@@ -36,6 +36,9 @@ section {
       @include grid-col-2;
     }
     @media screen and (min-width: 780px) {
+      @include grid-col-3;
+    }
+    @media screen and (min-width: 1000px) {
       @include grid-col-4;
     }
     @media screen and (min-width: 1200px) {
