@@ -4,6 +4,7 @@
       <img src="@/assets/img/logo-small.svg" alt="" />
     </div>
     <select name="" id="" v-model="userChoice" @change="onChange">
+      <option value="">Nessuno selezionato</option>
       <option v-for="option in genresList" :key="option" :value="option">
         {{ option }}
       </option>
@@ -22,7 +23,8 @@ export default {
   },
   methods: {
     onChange() {
-      this.$emit("selectGenre", this.userChoise);
+      console.log(this.userChoice);
+      this.$emit("selectGen", this.userChoice);
     },
   },
 };

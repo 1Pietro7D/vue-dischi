@@ -3,8 +3,8 @@
     <div class="d-flex">
       <AsideNavComp />
       <div class="d-column">
-        <HeaderComp :genresList="genres" @selectGenre="getFilterByGenre" />
-        <MainComp :cardsList="cardsAPI" />
+        <HeaderComp :genresList="genres" @selectGen="getFilterByGenre" />
+        <MainComp :cardsList="albumsToDisplay" />
       </div>
     </div>
     <FooterComp />
@@ -36,6 +36,28 @@ export default {
   created() {
     this.getAlbumData();
   },
+
+  computed: {
+    genres() {
+      const array = [];
+      this.cardsAPI.forEach((item) => {
+        if (!array.includes(item.genre)) {
+          array.push(item.genre);
+        }
+      });
+
+      return array;
+    },
+    albumsToDisplay() {
+      const array = [];
+      this.cardsAPI.forEach((album) => {
+        if (this.hasValidGenre(album)) {
+          array.push(album);
+        }
+      });
+      return array;
+    },
+  },
   methods: {
     getAlbumData() {
       axios
@@ -53,19 +75,13 @@ export default {
         });
     },
     getFilterByGenre(genre) {
+      console.log("main received", genre);
       this.selectGenre = genre;
     },
-  },
-  computed: {
-    genres() {
-      const array = [];
-      this.cardsAPI.forEach((item) => {
-        if (!array.includes(item.genre)) {
-          array.push(item.genre);
-        }
-      });
-      console.log({ genres: array });
-      return array;
+    hasValidGenre(album) {
+      console.log("miao", this.selectGenre);
+      console.log(this.selectGenre.length);
+      return this.selectGenre.length === 0 || this.selectGenre === album.genre;
     },
   },
 };
