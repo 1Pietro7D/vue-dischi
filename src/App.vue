@@ -1,9 +1,13 @@
 <template>
   <div id="app">
     <div class="d-flex">
-      <AsideNavComp />
+      <AsideNavComp @searchClick="clicker" />
       <div class="d-column">
-        <HeaderComp :genresList="genres" @selectGen="getFilterByGenre" />
+        <HeaderComp
+          :genresList="genres"
+          @selectGen="getFilterByGenre"
+          :clicked="click"
+        />
         <MainComp :cardsList="albumsToDisplay" />
       </div>
     </div>
@@ -31,6 +35,7 @@ export default {
       dataUrl: "https://flynn.boolean.careers/exercises/api/array/music",
       cardsAPI: [],
       selectGenre: "",
+      click: false,
     };
   },
   created() {
@@ -79,9 +84,14 @@ export default {
       this.selectGenre = genre;
     },
     hasValidGenre(album) {
-      console.log("miao", this.selectGenre);
-      console.log(this.selectGenre.length);
       return this.selectGenre.length === 0 || this.selectGenre === album.genre;
+    },
+    clicker() {
+      if (!this.click) {
+        return (this.click = true);
+      } else {
+        return (this.click = false);
+      }
     },
   },
 };

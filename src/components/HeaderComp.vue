@@ -3,7 +3,14 @@
     <div class="logoContainer">
       <img src="@/assets/img/logo-small.svg" alt="" />
     </div>
-    <select name="" id="" v-model="userChoice" @change="onChange">
+    <select
+      name=""
+      class="d-none"
+      id=""
+      v-model="userChoice"
+      @change="onChange"
+      :class="{ active: clicked === true }"
+    >
       <option value="">Nessuno selezionato</option>
       <option v-for="option in genresList" :key="option" :value="option">
         {{ option }}
@@ -17,20 +24,27 @@ export default {
   name: "HeaderComp",
   props: {
     genresList: Array,
+    clicked: Boolean,
   },
   data() {
-    return { userChoice: "" };
+    return {
+      userChoice: "",
+    };
   },
   methods: {
     onChange() {
       console.log(this.userChoice);
       this.$emit("selectGen", this.userChoice);
     },
+    onClick() {
+      this.$emit("status", this.clicked);
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/style/display.scss";
 @import "@/assets/style/variables.scss";
 @import "@/assets/style/flex.scss";
 
@@ -41,6 +55,9 @@ header {
   align-items: center;
   gap: 3rem;
   padding: 0 2rem;
+  .active {
+    display: inline-block;
+  }
   .logoContainer {
     margin-left: 1rem;
     $size: 50px;

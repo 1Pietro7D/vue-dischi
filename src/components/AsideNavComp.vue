@@ -1,7 +1,7 @@
 <template>
   <aside>
     <nav>
-      <div class="icon" id="search">
+      <div @click="onClick" class="icon" id="search">
         <img src="@/assets/img/search.svg" alt="" />
       </div>
     </nav>
@@ -11,6 +11,12 @@
 <script>
 export default {
   name: "AsideNavComp",
+
+  methods: {
+    onClick() {
+      this.$emit("searchClick");
+    },
+  },
 };
 </script>
 
