@@ -2,8 +2,8 @@
   <div id="app">
     <div class="d-flex">
       <AsideNavComp />
-      <div class="d-column flex-1">
-        <HeaderComp />
+      <div class="d-column">
+        <HeaderComp :genresList="genres" @selectGenre="getFilterByGenre" />
         <MainComp :cardsList="cardsAPI" />
       </div>
     </div>
@@ -30,6 +30,7 @@ export default {
     return {
       dataUrl: "https://flynn.boolean.careers/exercises/api/array/music",
       cardsAPI: [],
+      selectGenre: "",
     };
   },
   created() {
@@ -51,6 +52,21 @@ export default {
           console.warn(error);
         });
     },
+    getFilterByGenre(genre) {
+      this.selectGenre = genre;
+    },
+  },
+  computed: {
+    genres() {
+      const array = [];
+      this.cardsAPI.forEach((item) => {
+        if (!array.includes(item.genre)) {
+          array.push(item.genre);
+        }
+      });
+      console.log({ genres: array });
+      return array;
+    },
   },
 };
 </script>
@@ -58,11 +74,13 @@ export default {
 <style lang="scss">
 @import "@/assets/style/import.scss";
 @import "@/assets/style/flex.scss";
+@import "@/assets/style/variables.scss";
 #app {
   height: 100vh;
   @include flex-col;
 }
 .d-column {
+  width: $main-size_w;
 }
 .container-max {
   max-width: 1200px;

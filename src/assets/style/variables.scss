@@ -1,3 +1,4 @@
+// Color
 $brand_theme: #1ecf5f;
 $blue_primary: rgb(2 130 249);
 $almost_black: rgb(28 28 28);
@@ -8,3 +9,64 @@ $main_theme: rgb(30 45 59);
 $footer_theme: rgb(0, 0, 0);
 $card_theme: rgb(46 58 70);
 $white_theme: #fff;
+
+// Size
+$padding_x_my_grid: 3rem;
+$asideNav_size_w: 200px;
+$footer_size_h: 100px;
+$header_size_h: 100px;
+$main_size_w: calc(100vw - $asideNav_size_w);
+$main_size_h: calc(100vh - $footer_size_h - $header_size_h);
+
+@mixin grid-comp-col-1 {
+  display: grid;
+  grid-template-columns: $comp-one;
+}
+@mixin grid-comp-col-2 {
+  display: grid;
+  grid-template-columns: $comp-two $comp-two;
+}
+@mixin grid-comp-col-3 {
+  display: grid;
+  grid-template-columns: $comp-three $comp-three $comp-three;
+}
+@mixin grid-comp-col-4 {
+  display: grid;
+  grid-template-columns: $comp-four $comp-four $comp-four $comp-four;
+}
+@mixin grid-comp-col-5 {
+  display: grid;
+  grid-template-columns: $comp-five $comp-five $comp-five $comp-five $comp-five;
+}
+
+@mixin grid-comp-col-6 {
+  display: grid;
+  grid-template-columns: $comp-six $comp-six $comp-six $comp-six $comp-six $comp-six;
+}
+@mixin grid-comp-col-7 {
+  display: grid;
+  grid-template-columns: $comp-seven $comp-seven $comp-seven $comp-seven $comp-seven $comp-seven $comp-seven;
+}
+@mixin grid-comp-col-8 {
+  display: grid;
+  grid-template-columns: $comp-eight $comp-eight $comp-eight $comp-eight $comp-eight $comp-eight $comp-eight $comp-eight;
+}
+@mixin grid-comp-col-9 {
+  display: grid;
+  grid-template-columns: $comp-nine $comp-nine $comp-nine $comp-nine $comp-nine $comp-nine $comp-nine $comp-nine $comp-nine;
+}
+@mixin grid-comp-col-10 {
+  display: grid;
+  grid-template-columns: $comp-ten $comp-ten $comp-ten $comp-ten $comp-ten $comp-ten $comp-ten $comp-ten $comp-ten $comp-ten;
+}
+
+$comp-one: calc($main_size_w - ($padding_x_my_grid * 2));
+$comp-two: calc(($main_size_w - ($padding_x_my_grid * 2)) / 2);
+$comp-three: calc(($main_size_w - ($padding_x_my_grid * 2)) / 3);
+$comp-four: calc(($main_size_w - ($padding_x_my_grid * 2)) / 4);
+$comp-five: calc(($main_size_w - ($padding_x_my_grid * 2)) / 5);
+$comp-six: calc(($main_size_w - ($padding_x_my_grid * 2)) / 6);
+$comp-seven: calc(($main_size_w - ($padding_x_my_grid * 2)) / 7);
+$comp-eight: calc(($main_size_w - ($padding_x_my_grid * 2)) / 8);
+$comp-nine: calc(($main_size_w - ($padding_x_my_grid * 2)) / 9);
+$comp-ten: calc(($main_size_w - ($padding_x_my_grid * 2)) / 10);

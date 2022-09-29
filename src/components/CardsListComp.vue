@@ -30,22 +30,22 @@ export default {
 @import "@/assets/style/grid.scss";
 section {
   &.my-grid {
-    @include grid-col-1;
+    @include grid-comp-col-1;
 
-    @media screen and (min-width: 480px) {
-      @include grid-col-2;
+    @media screen and (min-width: calc(480px + $asideNav_size_w)) {
+      @include grid-comp-col-2;
     }
-    @media screen and (min-width: 780px) {
-      @include grid-col-3;
+    @media screen and (min-width: calc(780px + $asideNav_size_w)) {
+      @include grid-comp-col-3;
     }
-    @media screen and (min-width: 1000px) {
-      @include grid-col-4;
+    @media screen and (min-width: calc(1000px + $asideNav_size_w)) {
+      @include grid-comp-col-4;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: calc(1200px + $asideNav_size_w)) {
       @include grid-col-5;
     }
-    @media screen and (max-width: 1200px) {
-      padding: 2rem 3rem;
+    @media screen and (max-width: (1200px + $asideNav_size_w)) {
+      padding: 2rem $padding_x_my_grid;
     }
   }
 }

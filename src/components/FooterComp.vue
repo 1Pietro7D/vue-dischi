@@ -11,7 +11,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/variables.scss";
 footer {
-  flex: 1;
   background-color: $footer_theme;
+  height: $footer-size_h;
 }
 </style>
