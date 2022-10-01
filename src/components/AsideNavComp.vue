@@ -15,6 +15,7 @@ export default {
   methods: {
     onClick() {
       this.$emit("searchClick");
+      console.log("mi hai cliccato");
     },
   },
 };

@@ -44,9 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/style/display.scss";
 @import "@/assets/style/variables.scss";
-@import "@/assets/style/flex.scss";
 
 header {
   background-color: $header_theme;

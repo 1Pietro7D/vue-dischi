@@ -99,8 +99,12 @@ export default {
 
 <style lang="scss">
 @import "@/assets/style/import.scss";
-@import "@/assets/style/flex.scss";
+@import "@/assets/style/generics.scss";
 @import "@/assets/style/variables.scss";
+@import "@/assets/style/position.scss";
+@import "@/assets/style/flex.scss";
+@import "@/assets/style/display.scss";
+@import "@/assets/style/grid.scss";
 #app {
   height: 100vh;
   @include flex-col;
@@ -116,6 +120,7 @@ export default {
 </style>
 
 <!--
+  @import "@/assets/style/import.scss";
 @import "@/assets/style/generics.scss";
 @import "@/assets/style/variables.scss";
 @import "@/assets/style/position.scss"; 
